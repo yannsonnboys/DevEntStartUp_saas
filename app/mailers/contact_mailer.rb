@@ -2,7 +2,7 @@ class ContactMailer < ActionMailer::Base
 	# Default email
 	default to: 'y.e.s.d@icloud.com' 
 
-	def contact_mail(name, email, body)
+	def contact_email(name, email, body)
 		@name = name
 		@email = email
 		@body = body
