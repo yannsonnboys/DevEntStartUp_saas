@@ -25,6 +25,30 @@
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="main-nav-collapse">
+      <div class="nav navbar-nav navbar-right">
+
+        <% if current_user %>
+
+          <%= button_to destroy_user_session_path, class: 'btn btn-danger navbar-btn', method: :delete do %>
+            <i class="fa fa-sign-out"></i>
+            Sign Out
+          <% end %>
+
+        <% else %>
+          <!-- link_to = <a href=""></a> -->
+          <%= link_to new_user_session_path, class: 'btn btn-primary navbar-btn', method: :get do %>
+            <i class="fa fa-sign-in"></i>
+            Log In
+          <% end %>
+
+          <%= link_to new_user_registration_path, class: 'btn btn-success navbar-btn', method: :get do %>
+            <i class="fa fa-sign-in"></i>
+            Sign In
+          <% end %>
+
+        <% end %>
+
+      </div>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "About", about_path %></li>
         <li><%= link_to "Contact Us", new_contact_path %></li>
