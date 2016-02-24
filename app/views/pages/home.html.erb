@@ -17,14 +17,15 @@
           <%= link_to "Edit your profile", "#", class: 'btn btn-success btn-lg btn-block' %>
           <%= link_to "View your profile", user_path(current_user), class: 'btn btn-primary btn-lg btn-block' %>
         <% else %>
-          <%= link_to "Create your profile!", new_user_profile_path(current_user), class: 'btn btn-primary btn-lg btn-block' %>
+          <p>Create your profile so that you can share your information with the community.</p>
+          <%= link_to "Create your profile", new_user_profile_path(current_user), class: 'btn btn-primary btn-lg btn-block' %>
         <% end %> 
       </div>
     </div>
 
     <div class="col-md-6">
-      <div class="well">
-      <h2 class="text-center">The community</h2>
+      <div class="well text-center">
+      <h2>The community</h2>
       <p>Visit the community to meet other developers, designers, entrepreneurs, and investors!</p>
       <%= link_to "Visit the community", "#", class: 'btn btn-primary btn-lg btn-block' %>
       </div>
