@@ -1,17 +1,62 @@
-<%= image_tag @user.profile.avatar.url %><br/>
-<%= @user.profile.first_name %> <%= @user.profile.last_name %><br/>
-<%= @user.profile.sex %><br/>
-<%= @user.profile.job_title %><br/>
+<div class="row">
 
-<% if current_user.plan_id == 2 %>
+	<!-- Profile picture -->
+	<div class="col-md-3">
+		
+	</div>
 
-	<%= @user.profile.phone_number %><br/>
-	<%= @user.profile.contact_email %><br/>
-	<%= @user.profile.country %><br/>
-	<%= @user.profile.location %><br/>
+	<!-- Profile information -->
+	<div class="col-md-6 text-center">
+		<%= image_tag @user.profile.avatar.url, class: 'image_profile' %><br/>
+		<h1><%= @user.profile.first_name %> <%= @user.profile.last_name %></h1>
+		<h6><%= sex_icon %> <%= @user.profile.sex %></strong></h6>
+		<h4><span class="job-title-icon"><%= job_title_icon %></span> <%= @user.profile.job_title %></h4>
+		<div class="well profile-block profile-description">
+			<h3>Description :</h3>
+			<%= @user.profile.description %>
+		</div>
 
-<% end %>
+		<% if true #current_user.plan_id == 2 %>
 
-<%= @user.profile.description %><br/>
+			<div class="well profile-block contact-info">
+				<h3>Contact Info :</h3>
+				<i class="fa fa-phone"></i>&nbsp;&nbsp;<%= @user.profile.phone_number %><br/>
+				<i class="fa fa-envelope"></i>&nbsp;&nbsp;<%= @user.profile.contact_email %><br/>
+				<i class="fa fa-globe"></i>&nbsp;&nbsp;<%= @user.profile.country %><br/>
+				<i class="fa fa-map-marker"></i>&nbsp;&nbsp;<%= @user.profile.location %><br/>
+			</div>
+		<% end %>
+	</div>
 
+	<!-- Place for Ads -->
+	<!-- <div class="col-md-3">
+
+		<div>
+			<span>
+				<a href="#"><img src="../images/idea.jpg" alt="idea" id="image1"></a>
+			</span>
+		</div><br/>
+
+		<div>
+			<span>
+			<a href="#"><img src="../images/MeetDevelopers.jpg" alt="MeetDevelopers" id="image1"></a>
+			</span>
+		</div><br/>
+
+		<div>
+			<span>
+			<a href="#"><img src="../images/MeetEntrepreneur.jpg" alt="MeetEntrepreneur" id="image1"></a>
+			</span>
+		</div><br/>
+
+		<div>
+			<span>
+			<a href="#"><img src="../images/MeetInvestors.jpg" alt="MeetInvestors" id="image1"></a>
+			</span>
+		</div><br/>
+
+	</div> -->
+
+
+</div>
 
