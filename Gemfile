@@ -68,6 +68,9 @@ gem 'stripe', '1.35.1'
 # Figaro libray to hide secret keys
 gem 'figaro', '1.1.1'
 
+# Paperclip library for image uploads
+gem 'paperclip', '4.3.5'
+
 
 
 
