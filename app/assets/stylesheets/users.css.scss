@@ -1,3 +1,4 @@
+/* User avatar */
 .image_profile {
 	width: 100px;
 	height: 100px;
@@ -22,6 +23,7 @@
 	border: 2px solid white;
 }
 
+/* User Profile */ 
 .job-title-icon {
 	width: 25px;
 	height: 25px;
@@ -51,17 +53,14 @@
 	border-color: #5bc0de;
 }
 
-.well.white-bg {
-	background-color: lightgray;
-	
-}
-
+/* User list */
 #job {
-	margin: -10px 0 0 0;
+	margin: -5px 0 0 0;
 }
 
-.text {
-	text-align: justify;
+.well.white-bg {
+	background-color: lightgrey;
+
 }
 
 /* CSS for Ads */
