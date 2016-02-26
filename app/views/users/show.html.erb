@@ -1,13 +1,29 @@
 <div class="row">
 
-	<!-- Profile picture -->
 	<div class="col-md-3">
-		
+	<!-- Profile picture -->
+	<% if current_user.plan_id == 2 %>
+	  <div class="well text-center">
+        <h2>Projects</h2>
+        <p class="text-center text">
+        	Click on the button below to see all project details. For security you should sign up again, you can also use the same information for that.
+        </p>
+        <a href="#" class="btn btn-primary btn-lg btn-block"><i class="fa fa-archive"></i>&nbsp;&nbsp;View Projects</a>  <!-- <a href="/users/sign_up">Sign up</a> -->
+      </div>
+
+	<% else %>
+	  <div class="well text-center">
+        <h2>Projects</h2>
+        <p class="text-center">Sign up for pro account to view the project details.</p>
+        <i class="fa fa-smile-o fa-2x btn btn-primary btn-lg btn-block">!</i>
+      </div>
+
+	<% end %>
 	</div>
 
 	<!-- Profile information -->
 	<div class="col-md-6 text-center">
-		<%= image_tag @user.profile.avatar.url, class: 'image_profile' %><br/>
+		<%= image_tag @user.profile.avatar.url, class: 'image_profile' %>
 		<h1><%= @user.profile.first_name %> <%= @user.profile.last_name %></h1>
 		<h6><%= sex_icon %> <%= @user.profile.sex %></strong></h6>
 		<h4><span class="job-title-icon"><%= job_title_icon %></span> <%= @user.profile.job_title %></h4>
@@ -16,7 +32,7 @@
 			<%= @user.profile.description %>
 		</div>
 
-		<% if true #current_user.plan_id == 2 %>
+		<% if current_user.plan_id == 2 %>
 
 			<div class="well profile-block contact-info">
 				<h3>Contact Info :</h3>
@@ -25,7 +41,9 @@
 				<i class="fa fa-globe"></i>&nbsp;&nbsp;<%= @user.profile.country %><br/>
 				<i class="fa fa-map-marker"></i>&nbsp;&nbsp;<%= @user.profile.location %><br/>
 			</div>
+
 		<% end %>
+
 	</div>
 
 	<!-- Place for Ads -->

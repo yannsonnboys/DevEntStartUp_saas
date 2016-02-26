@@ -10,6 +10,18 @@
 	border: 2px solid white;
 }
 
+.image_profile1 {
+	width: 70px;
+	height: 70px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	box-shadow: 0 6px 4px 0 rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 6px 4px 0 rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 6px 4px 0 rgba(0, 0, 0, .8);
+	border: 2px solid white;
+}
+
 .job-title-icon {
 	width: 25px;
 	height: 25px;
@@ -39,6 +51,18 @@
 	border-color: #5bc0de;
 }
 
+.well.white-bg {
+	background-color: lightgray;
+	
+}
+
+#job {
+	margin: -10px 0 0 0;
+}
+
+.text {
+	text-align: justify;
+}
 
 /* CSS for Ads */
 #image1 {
