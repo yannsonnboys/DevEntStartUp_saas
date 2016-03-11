@@ -3,12 +3,12 @@ class ProjectsController < ApplicationController
 	def new
 		# Form where user can fill out their own project.
 		@user = User.find(params[:user_id]) # determine the user who is log in
-		@project = @user.project.build # Building a form for the project
+		@project = Project.new # Building a form for the project
 	end
 
 	def create
 		@user = User.find(params[:user_id])
-		@profile = @user.project.build(project_params)
+		@project = @user.build_project(project_params)
 
 		if @project.save	
 			flash[:success] = "Your project is now update!"

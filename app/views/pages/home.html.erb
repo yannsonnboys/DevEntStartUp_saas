@@ -1,5 +1,3 @@
-<%= link_to "Create your project!", new_user_projects_path(current_user) if current_user %>
-
 <!-- Jumbotron -->
 <div class="jumbotron text-center well">
 	<h1>Welcome to DevEntStartUp</h1>
@@ -11,7 +9,7 @@
 <div class="row">
 
   <% if user_signed_in? %>
-
+    <!-- Create and edit profile -->
     <div class="col-md-6">
       <div class="well text-center">
         <h2>Your Profile</h2>
@@ -25,14 +23,30 @@
       </div>
     </div>
 
+    <!-- Create and edit project -->
     <div class="col-md-6">
+      <div class="well text-center">
+        <h2>Your Project</h2>
+        <% if current_user.project %>
+          <%= link_to "Edit your project", "#", class: 'btn btn-success btn-lg btn-block' %>
+          <%= link_to "View your project", user_projects_path(current_user), class: 'btn btn-primary btn-lg btn-block' %>
+         <% else %>
+          <p>Create your project so that you can share your idea with the community.</p><br/>
+          <%= link_to "Create your project!", new_user_project_path(current_user), class: 'btn btn-success btn-lg btn-bloc'%>
+         <% end %> 
+
+      </div>
+    </div>
+
+    <!-- Link to the community -->
+    <div class="col-md-6 col-md-offset-3">
       <div class="well text-center">
       <h2>The community</h2>
       <p>Visit the community to meet other developers, designers, entrepreneurs, and investors!</p>
       <%= link_to "Visit the community", users_path, class: 'btn btn-primary btn-lg btn-block' %>
       </div>
-    </div> 
-
+    </div>   
+    
   <% else %> 
 
       <!-- Carousel -->
@@ -126,5 +140,7 @@
 
   <% end %>
 </div>
+
+
 
 

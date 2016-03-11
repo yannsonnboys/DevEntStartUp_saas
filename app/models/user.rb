@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
   belongs_to :plan
   has_one :profile
-  has_many :project
+  has_one :project
 
   attr_accessor :stripe_card_token
 

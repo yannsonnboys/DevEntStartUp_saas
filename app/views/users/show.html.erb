@@ -8,7 +8,8 @@
         <p class="text-center text">
         	Click on the button below to see all project details. For security you should sign up again, you can also use the same information for that.
         </p>
-        <a href="#" class="btn btn-primary btn-lg btn-block"><i class="fa fa-archive"></i>&nbsp;&nbsp;View Projects</a>  <!-- <a href="/users/sign_up">Sign up</a> -->
+        <!-- Link to the project page -->
+        <%= link_to "View Project", user_projects_path(current_user), class: 'btn btn-primary btn-lg btn-block' %>  <!-- <a href="/users/sign_up">Sign up</a> -->
       </div>
 
 	<% else %>
