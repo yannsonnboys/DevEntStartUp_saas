@@ -32,7 +32,7 @@
           <%= link_to "View your project", user_projects_path(current_user), class: 'btn btn-primary btn-lg btn-block' %>
          <% else %>
           <p>Create your project so that you can share your idea with the community.</p><br/>
-          <%= link_to "Create your project!", new_user_project_path(current_user), class: 'btn btn-success btn-lg btn-bloc'%>
+          <%= link_to "Create your project", new_user_project_path(current_user), class: 'btn btn-primary btn-lg btn-block' %>
          <% end %> 
 
       </div>
